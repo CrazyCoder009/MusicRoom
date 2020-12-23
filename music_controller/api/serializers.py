@@ -10,3 +10,8 @@ class RoomSerializer(serializers.ModelSerializer):
 
 
 #this takes Room in models.py and convert to json api
+
+class CreateRoomSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Room
+        fields = ('guest_can_pause', 'votes_to_skip')

@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import RoomView  #see views.py and #serializers.py for reference
+from .views import RoomView, CreateRoomView  #see views.py and #serializers.py for reference
 
 urlpatterns = [
     path('room', RoomView.as_view()),   #.as_view (take this class and show me)
+    path('create-room', CreateRoomView.as_view())
 ]
 
 
